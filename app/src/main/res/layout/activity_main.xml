@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wal"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/timerseekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tickMark="@color/black"
+        app:tickMarkTint="#F10A0A" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:gravity="bottom|top"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timerseekBar">
+
+        <Button
+            android:id="@+id/ten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="ten"
+            android:text="10:00"
+            android:textColor="#0B0B0B"
+            app:backgroundTint="#FFEB3B" />
+
+        <Button
+            android:id="@+id/fifteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="fifteen"
+            android:text="15:00"
+            android:textColor="#0E0E0E"
+            app:backgroundTint="#FFC107" />
+
+        <Button
+            android:id="@+id/thirty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="thirty"
+            android:text="30:00"
+            app:backgroundTint="#FF9800" />
+
+        <Button
+            android:id="@+id/fourty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="fourty"
+            android:text="45:00"
+            app:backgroundTint="#F10505" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/rawEgg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="72dp"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/crackedegg" />
+
+    <TextView
+        android:id="@+id/countertextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="00:30"
+        android:textColor="#060606"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/rawEgg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="88dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/black"
+        android:onClick="buttonClick"
+        android:text="Set !"
+        android:textColor="#000000"
+        app:backgroundTint="#FF9800"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rawEgg" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:onClick="stop"
+        android:text="Stop"
+        app:backgroundTint="#EF0A0A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rawEgg" />
+
+    <ImageView
+        android:id="@+id/chickenEgg"
+        android:layout_width="383dp"
+        android:layout_height="368dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/rawEgg"
+        app:layout_constraintEnd_toEndOf="@+id/rawEgg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rawEgg"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/brokegg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
